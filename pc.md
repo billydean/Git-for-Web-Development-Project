@@ -21,12 +21,17 @@ Welcome to day 1 at BloomTech, today we are going to spend time setting up your 
 Now that you are all set up, it's time to learn a little more about the tools of the trade. Edit this file and answer the following questions. You can type your answer below the questions. You are going to need to start familiarizing yourself with the [GitHub docs](https://docs.github.com/en) doc short for documentation are the instructions on how to use a languge, or program. A large part of your job as a developer will be learning how to read and work with documentation. Please reference the GitHub docs when answering the questions below. If you cannot find what you are looking for in the docs, you can always start to practice your google skills. 
 
 1. What is git? What is the difference between git and GitHub?
+    Git is version control software, and GitHub is a hosting service for git repositories.
 2. Why do we create a branch? 
-3. What is the purpose of a pull request? 
+    Creating branches allows team members to work on specific parts of larger projects, such that they can be reviewed and merged individually.
+3. What is the purpose of a pull request?
+    It communicates to (whoever might be responsible) that you've made changes that need to be reviewed and/or merged.
 4. What is the command you can use to switch between branches? For example you are working on a feature branch and you want to switch back to main. 
+    $ git checkout -b
 5. Explain the difference between `git fetch`, `git merge` and `git pull` what does each command do? 
+    `git fetch` will download any new changes, branches, etc. from an online repository to your local repository. I guess you'd use this if you want to review different branches (or forks?) from the remote repository in your local repository.
+    `git merge` combines changes into a single branch, updating the repository to reflect any new commits
+    `git pull` is like `git fetch`, but it automatically merges the downloaded repository content with whatever you have in your local repository. I guess this would be preferred when you just need the current version of your main branch so that you can work on it locally (i.e. when you don't need to decide what to merge or not)
 6. What is a merge conflict? How do you resolve a merge conflict? 
-
-
-
-test
+    A merge conflict occurs when either contributors make different changes to the same line or when someone deletes a file another contributor has edited. 
+    Git will add conflict markers to the code in question, indicating where the conflict begins/ends, as well as which branches are involved in the conflict. In VSC (or whatever editor), decide which change you'd like to keep and delete the rest (along with the conflict markers). Then you should be able to stage and commit your changes like normal.
