@@ -26,3 +26,7 @@ Now that you are all set up, it's time to learn a little more about the tools of
 4. What is the command you can use to switch between branches? For example you are working on a feature branch and you want to switch back to main. 
 5. Explain the difference between `git fetch`, `git merge` and `git pull` what does each command do? 
 6. What is a merge conflict? How do you resolve a merge conflict? 
+
+
+
+test
